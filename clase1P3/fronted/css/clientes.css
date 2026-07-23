@@ -1,0 +1,39 @@
+/* Insignia del cliente que mas ha comprado en el año actual */
+.badge-cliente-fiel{
+    display: inline-block;
+    padding: 0.35em 0.8em;
+    border-radius: 50rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background-color: #ffc107;
+    color: #212529;
+}
+
+/* Insignia de puntos acumulados */
+.badge-puntos{
+    display: inline-block;
+    padding: 0.35em 0.8em;
+    border-radius: 50rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    background-color: var(--verde-oscuro);
+    color: white;
+}
+
+/* Badges de estado de factura (usados dentro del modal de historial de compras) */
+.badge-estado{
+    display: inline-block;
+    padding: 0.4em 0.9em;
+    border-radius: 50rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #fff;
+}
+.badge-pagada{
+    background-color: #198754;
+}
+.badge-anulada{
+    background-color: #dc3545;
+}

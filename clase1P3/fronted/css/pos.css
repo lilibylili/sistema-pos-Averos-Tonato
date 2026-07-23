@@ -1,0 +1,73 @@
+/* pos.css - Estilos propios de la vista Punto de Venta (pos.php) */
+
+.btn-verde{
+    background-color: var(--verde-oscuro);
+    color: white;
+}
+.btn-verde:hover{
+    background-color: var(--verde-medio);
+    color: white;
+}
+
+#input-scanner{
+    font-size: 1.5rem;
+    padding: 0.75rem 1rem;
+}
+
+.btn-cantidad{
+    width: 32px;
+}
+
+/* Panel lateral (sidebar) ocultable con el botón hamburguesa */
+#sidebar{
+    transition: transform 0.3s ease;
+}
+#sidebar.oculto{
+    transform: translateX(-280px);
+}
+
+#content{
+    transition: margin-left 0.3s ease;
+}
+#content.expandido{
+    margin-left: 0 !important;
+}
+
+/* Overlay del lector de codigo de barras con camara */
+#overlay-camara{
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050;
+}
+.camara-caja{
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+}
+
+/* resultados en vivo del buscador de producto y de cliente */
+#resultados-producto,
+#resultados-cliente{
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+/* Insignia del Cliente Fiel del Año (panel completo y version mini en la lista de busqueda) */
+.badge-cliente-fiel{
+    display: inline-block;
+    padding: 0.35em 0.8em;
+    border-radius: 50rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background-color: #ffc107;
+    color: #212529;
+}
+.badge-cliente-fiel-mini{
+    font-size: 0.85rem;
+}

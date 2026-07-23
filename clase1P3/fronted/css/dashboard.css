@@ -1,0 +1,80 @@
+:root {
+    --verde-oscuro: #1b4332;
+    --verde-medio: #2d6a4f;
+    --verde-claro: #40916c;
+    --fondo-gris: #f4f6f9;
+}
+
+body{
+    background-color: var(--fondo-gris);
+    font-family: 'segoe ui', tahoma, Geneva, verdana, sans-serif;
+    overflow-x: hidden;
+}
+
+/*diseño del menu sidebar*/
+#sidebar{
+    min-width: 250px;
+    max-width: 250px;
+    background: var(--verde-oscuro);
+    color: #fff;
+    transition: all 0.3s;
+    height: 100vh;
+}
+#sidebar .sidebar-header{
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid var(--verde-medio);
+}
+
+#sidebar ul.components{
+    padding: 20px 0;
+}
+
+#sidebar ul p{
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a{
+    padding: 10px 20px;
+    font-size: 1.1em;
+    display: block;
+    color: #d8f3dc;
+    transition: 0.2s;
+}
+
+#sidebar ul li a:hover{
+    color: #fff;
+    background: var(--verde-medio);
+    border-left: 4px solid var(--verde-claro);
+}
+
+/*diseño del contendio principal*/
+#content{
+    width: 100%;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+/*boton cerrar secion*/
+.btn-logout{
+    background-color: #d90429;
+    color: #fff;
+    border: none;
+}
+
+.btn-logout:hover{
+    background-color: #9d0208;
+    color: #fff;
+}
+/*efectos hover para los enlaces del menu lateral*/
+.menu-item{
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    padding: 10px 12px;
+}
+.menu-item:hover{
+    background-color: var(--verde-medio);
+    color: #fff;
+    transform: translateX(5px); /*pequeño salto a la derecha al pasar el mouse*/
+}

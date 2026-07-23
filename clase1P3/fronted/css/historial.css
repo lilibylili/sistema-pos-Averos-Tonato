@@ -1,0 +1,32 @@
+/* Panel lateral (sidebar) ocultable con el botón hamburguesa */
+#sidebar{
+    transition: transform 0.3s ease;
+}
+#sidebar.oculto{
+    transform: translateX(-280px);
+}
+
+#content{
+    transition: margin-left 0.3s ease;
+}
+#content.expandido{
+    margin-left: 0 !important;
+}
+
+/* Estilos para el historial de ventas */
+.badge-estado{ /*estilo de las etiquetas de estado de la factura*/
+    display: inline-block;
+    padding: 0.4em 0.9em;
+    border-radius: 50rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #fff;
+}
+.badge-pagada{ /*estilo de la etiqueta de factura pagada*/
+    background-color: #198754;
+}
+.badge-anulada{ /*estilo de la etiqueta de factura anulada*/
+    background-color: #dc3545;
+}
