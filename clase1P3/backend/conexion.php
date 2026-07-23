@@ -12,19 +12,18 @@ declare(strict_types=1);
     // Incluimos el puerto en el DSN
     $dsn = "mysql:host=$host;port=$port;dbname=$database;charset=$charset";
 
-    // Configuraciones de PDO
+    // Configuraciones de PDO adaptadas para Vercel Serverless + Aiven
     $options = [
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
         PDO::ATTR_EMULATE_PREPARES => false,
-        // Opción recomendada para conexiones SSL con Aiven
-        PDO::MYSQL_ATTR_SSL_CA => true,
+        // En Vercel desactivamos la verificación del CA local para permitir la conexión SSL con Aiven
+        PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT => false,
     ];
 
 try {
     // Crear la instancia de PDO
     $pdo = new PDO($dsn, $user, $password, $options);
-    http_response_code(200);
 
 } catch (PDOException $e) {
     // Responder con JSON y código 500
