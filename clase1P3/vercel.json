@@ -6,6 +6,14 @@
   },
   "routes": [
     {
+      "src": "/frontend/(.*)",
+      "dest": "/frontend/$1"
+    },
+    {
+      "src": "/fronted/(.*)",
+      "dest": "/fronted/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/api/index.php"
     }
